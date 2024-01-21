@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables - Colspan & Rowspan</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="./images/colspan.png" width="600px" height="300px" alt="colspan" />
+    <br />
+    <hr />
+
+    <b>Colspan</b>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+            
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>123123123</td>
+            <td>345345345</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+
+    Rowspan - Tables
+    <img src="./images/rowspan.png" width="600px" height="250px" alt="vertical headings" />
+    <br />
+    <hr />
+
+    <b>Rowspan</b>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>123123123</td>
+        </tr>
+        <tr>
+            
+            <td>345345345</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+    
+</body>
+</html>
