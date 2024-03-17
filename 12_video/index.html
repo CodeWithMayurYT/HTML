@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video</title>
+</head>
+<body>
+
+    <h1>HTML Video</h1>
+
+    <video controls height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls autoplay muted height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls muted height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls loop height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls poster="media/thumbnail.png" height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls controlslist="nofullscreen nodownload" height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+
+    <video controls disablepictureinpicture oncontextmenu="return false"  height="300" width="300">
+        <source src="media/sample.mp4" type="video/mp4">
+    </video>
+    <br />  <br />
+
+    <!-- Download Video File -->
+    <a href="media/sample.mp4" download>
+        Download video
+    </a>
+    <br />
+    <br />
+    
+    
+</body>
+</html>
