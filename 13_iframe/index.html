@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Iframe</title>
+</head>
+<body>
+
+    <h1>HTML Iframe</h1>
+
+    <iframe src="https://www.example.com" height="500px" width="500px" name="example1" title="Iframe for example.com"></iframe>
+
+    <br><br>
+    <a href="https://www.google.com?igu=1" target="example1">
+        Open Google
+    </a>
+
+    <br><br>
+    <iframe title="Example Iframe" src="example.html"></iframe>
+
+    <br><br>
+    <iframe title="srcdoc Example" srcdoc='<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Example</title>
+        </head>
+        <body>
+        
+            <h1>Srcdoc Example</h1>
+            
+        </body>
+        </html>'></iframe>
+    
+</body>
+</html>
