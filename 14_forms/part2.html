@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Part 2</title>
+
+    <style>
+        input[type="range"] {
+            width: 200px;
+            margin: 0;
+        }
+        datalist {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            writing-mode: vertical-lr;
+            width: 200px;
+        }
+        option {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="userDetailsForm" onsubmit="submitForm(event)">
+        <label for="resume">Upload Resume</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .png, images/*" multiple capture="environment">
+
+        <br /><br />
+        <label for="githubLink">Github Link</label>
+        <input type="url" id="githubLink" name="githubLink" minlength="10" maxlength="100" pattern="https:\/\/github\.com\/.*" title="Please enter a valid github profile URL.">
+
+        <br><br>
+        <label for="userSearch">Search</label>
+        <input type="search" id="userSearch" name="userSearch" minlength="5" maxlength="100">
+
+        <br><br>
+        <input type="search" id="userSearch1" name="userSearch" minlength="5" maxlength="100"
+        placeholder="Search here...">
+        
+        <br><br>
+        <label for="range">Range</label>
+        <input type="range" id="range" name="range" min="20" max="150" step="5">
+        Value: <span id="rangeValue"></span>
+
+        <br><br>
+        <img src="./media/range-example.png">
+
+        <br><br>
+        <label for="temperature">Temperature</label><br>
+        <input type="range" id="temperature" name="temperature" list="tempValues" min="0" max="40" step="10">
+
+        <datalist id="tempValues">
+            <option value="0" label="very cold"></option>
+            <option value="10" label="cool"></option>
+            <option value="20" label="medium"></option>
+            <option value="30" label="warm"></option>
+            <option value="40" label="hot"></option>
+        </datalist>
+
+        <br><br>
+        <label for="favColor">Favorite Color</label>
+        <input type="color" id="favColor" name="favColor" value="#ff0000">
+
+        <br><br>
+        <label for="birthDateTime">
+            Birth Date and Time
+        </label>
+        <input type="datetime-local" id="birthDateTime" name="birthDateTime" value="2024-05-01T07:00" min="2024-05-01T07:00" max="2024-05-31T07:00">
+
+        <br><br>
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" name="birthDate" value="2024-05-01" min="2024-05-01" max="2024-05-31">
+        
+        <br><br>
+        <label for="birthTime">Birth Time</label>
+        <input type="time" id="birthTime" name="birthTime" value="10:00" min="09:00" max="17:00">
+
+        <br><br>
+        <label for="birthMonth">Birth Month</label>
+        <input type="month" id="birthMonth" name="birthMonth" value="2024-05" min="2024-05" max="2024-07">
+
+        <br><br>
+        <label for="week">Select week</label>
+        <input type="week" id="week" name="week" value="2024-W19" min="2024-W15" max="2024-W20">
+
+        <br><br>
+        <input type="button" id="save" name="save" value="Save">
+
+        <input type="reset" id="reset" name="reset" value="Reset Form">
+
+        <br><br>
+        <input type="submit" value="Submit Form">
+    </form>
+
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            var form = document.getElementById("userDetailsForm");
+            var formData = new FormData(form);      
+            // Display inputs in console
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+        }
+
+        const rangeValue = document.querySelector("#rangeValue");
+        const rangeInput = document.querySelector("#range");
+        rangeValue.textContent = rangeInput.value;
+        rangeInput.addEventListener("input", (event) => {
+            rangeValue.textContent = event.target.value;
+        });
+  </script>
+
+    
+    
+</body>
+</html>
