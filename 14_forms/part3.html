@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Common Attributes</title>
+</head>
+<body>
+    <h1>HTML Forms - Common Attributes</h1>
+    <form id="userDetailsForm" method="get" enctype="multipart/form-data">
+        <!-- action="register.php" -->
+
+        <!-- Default encoding - application/x-www-form-urlencoded -->
+        <!-- File upload - multipart/form-data -->
+
+        <!-- novalidate -->
+
+        <!-- GET Request -->
+
+        <!-- http://127.0.0.1:5500/14_forms/part3.html?firstName=Tony&lastName=&age=&email=&password=&employmentStatus=unemployed&language=English&country=US -->
+
+
+        <!-- Text Input type -->
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstName" value="Tony" autofocus autocomplete="on">
+
+        <br><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastName" required autocomplete="off">
+
+        <br><br>
+        <!-- Number Input type -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="15" readonly>
+
+        <br><br>
+        <!-- Email Input Type -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" disabled>
+
+        <br><br>
+        <!-- Password Input Type -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <br><br>
+        <!-- Radio Input Type -->
+        <input type="radio" id="employed" value="employed" name="employmentStatus">
+        <label for="employed">Employed</label>
+
+        <input type="radio" id="unemployed" value="unemployed" name="employmentStatus" checked>
+        <label for="unemployed">Unemployed</label>
+
+        <br><br>
+        <!-- Checkbox Input Type -->
+        <label>Preferred Languages</label>
+        <input type="checkbox" id="english" value="English" name="language" checked>
+        <label for="english">English</label>
+
+        <input type="checkbox" id="German" value="German" name="language">
+        <label for="German">German</label>
+
+        <input type="checkbox" id="Spanish" value="Spanish" name="language">
+        <label for="Spanish">Spanish</label>
+
+        <input type="checkbox" id="Other" value="Other" name="language">
+        <label for="Other">Other</label>
+
+        <br><br>
+        <!-- Select Input Type -->
+        <label for="country" hidden>Country</label>
+        <select name="country" id="country" hidden>
+            <option value="India">India</option>
+            <option value="US" selected>US</option>
+            <option value="UK">UK</option>
+            <option value="Japan">Japan</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Submit Form">
+
+    </form>
+
+</body>
+
+</html>
